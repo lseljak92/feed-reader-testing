@@ -13,6 +13,3 @@ Testing is an important part of the development process and many organizations p
 ## Outcome
 
 I was able to use Jasmine to write a number of tests against a pre-existing application. These test the underlying business logic of the application as well as the event handling and DOM manipulation.
-
-## Reference
-[2.1 Jasmine Documentation]:[https://jasmine.github.io/2.1/introduction.html]

@@ -46,16 +46,15 @@ $(function() {
         
         //Ensure loadFeed function completes it work
          beforeEach(function(done) {
-             loadFeed(0, function() {
-                 done();
+             loadFeed(0, done);
              });
-         });
 
-         it('ensure that entry has more than 0 entries', function(){
-             expect($('entry.feed')).toBeDefined();
-             expect($('entry.feed')).toBeGreaterThan(0);
-         });
-    });
+            it('ensure that entry has more than 0 entries', function(){
+                expect($('.feed .entry')).toBeDefined();
+                expect($('.feed .entry').length).toBeGreaterThan(0);
+            });
+        });
+        
         
     describe('New Feed Selection', function() {
         //Compare initial and new feeds. Compare and ensure they are different
@@ -69,10 +68,11 @@ $(function() {
                 done();
              });
         });
-
+        });
         it('feed content changes', function(){
             expect(feedAfterFirstLoad).not.toBe(feedAfterSecondLoad);
         });
     });
+    
         
 }());
